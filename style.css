@@ -5,15 +5,17 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  width: 100%; }
 
 header {
   min-height: 110px;
   width: 100%;
   background-color: rgba(0, 47, 77, 0.4);
   margin: 0 auto;
+  z-index: 1;
   position: absolute;
-  z-index: 1; }
+  top: 0; }
   header .navbar-brand {
     position: absolute;
     left: 16%;
@@ -23,10 +25,10 @@ header {
     justify-content: flex-end;
     flex-direction: row;
     padding-top: 27px; }
-  header .navbar-default .navbar-nav > li > a:focus, header .navbar-default .navbar-nav > li > a {
-    border-bottom: 2px solid transparent; }
-  header .navbar-default .navbar-nav > li > a:focus, header .navbar-default .navbar-nav > li > a:hover {
-    border-bottom: 2px solid #ffffff; }
+  header .navbar > li > a:focus {
+    border: 2px solid transparent; }
+  header .navbar > li > a:focus .navbar > li > a:hover {
+    border: 2px solid #ffffff; }
   header a:-webkit-any-link {
     color: #ffffff;
     text-decoration: none; }
@@ -45,25 +47,44 @@ a .glasses:hover {
 
 .item {
   background: url(images/background_photo.png) no-repeat;
-  background-size: 100%;
-  text-align: left;
-  width: 100%;
-  padding-bottom: 854px;
-  margin: 0 auto;
-  top: 0;
   position: absolute;
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  padding-top: 232px;
-  padding-left: 263px; }
-  @media (min-width: 1500px) {
+  left: 0;
+  top: 0;
+  right: 0;
+  min-width: 1440px;
+  min-height: 910px;
+  background-size: 100%;
+  margin: 0;
+  z-index: 0; }
+  .item .header_social {
+    display: flex;
+    flex-direction: column;
+    padding-top: 260px;
+    padding-left: 300px;
+    padding-bottom: 314px; }
+  @media (max-width: 1500px) {
     .item {
       background-size: 100%;
       display: flex;
       flex-direction: column;
-      padding-top: 300px;
-      padding-left: 285px; } }
+      padding-bottom: 314px; }
+      .item .header_social {
+        display: flex;
+        flex-direction: column;
+        padding-top: 180px;
+        padding-left: 249px; } }
+  @media (max-width: 750px) {
+    .item .header_social {
+      display: flex;
+      flex-direction: column;
+      padding-top: 180px;
+      padding-left: 100px; } }
+  @media (max-width: 400px) {
+    .item .header_social {
+      display: flex;
+      flex-direction: column;
+      padding-top: 180px;
+      padding-left: 20px; } }
   .item h2 {
     width: 300px;
     font-size: 50px;
@@ -100,10 +121,65 @@ a .glasses:hover {
     line-height: 1.333;
     text-align: left; }
 
-.carousel {
-  padding-top: 80px;
-  padding-bottom: 67px;
-  background: url(images/bg-2_13.png) no-repeat;
-  background-size: 100%; }
+.iphones {
+  padding-top: 1200px;
+  text-align: center; }
+  @media (max-width: 1500px) {
+    .iphones {
+      padding-top: 932px; } }
+  .iphones .title {
+    font-size: 50px;
+    font-family: "OpenSansRegular", sans-serif;
+    color: #354351;
+    line-height: 1.2;
+    margin: 0;
+    padding-bottom: 77px; }
+  .iphones .info {
+    background: url(images/bg-2_13.png) no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0; }
+  .iphones .iph {
+    display: flex;
+    justify-content: center; }
+    .iphones .iph .iphone_copy {
+      width: 254px;
+      margin-left: 45px; }
+    .iphones .iph h3 {
+      font-size: 30px;
+      font-family: "OpenSansRegular", sans-serif;
+      color: #354351;
+      font-weight: bold;
+      line-height: 1;
+      text-align: center; }
+    .iphones .iph p {
+      font-size: 18px;
+      font-family: "OpenSansRegular", sans-serif;
+      color: #354351;
+      padding-bottom: 70px; }
+  .iphones .time_24 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 67px; }
+    .iphones .time_24 .info_more .effect {
+      font-size: 30px;
+      font-family: "OpenSansRegular", sans-serif;
+      color: #354351;
+      font-weight: bold;
+      line-height: 1;
+      text-align: left;
+      width: 525px; }
+    .iphones .time_24 .info_more {
+      font-size: 18px;
+      font-family: "OpenSansRegular", sans-serif;
+      color: #354351;
+      line-height: 1;
+      text-align: left;
+      width: 525px;
+      padding-left: 65px;
+      padding-top: 97px;
+      padding-bottom: 46px; }
+    .iphones .time_24 a {
+      color: #d11457; }
 
 /*# sourceMappingURL=style.css.map */
