@@ -7,11 +7,32 @@
   url('fonts/OpenSansRegular.ttf') format('truetype'),
   url('fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
 }
-
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url('fonts/MyriadProRegular.eot');
+  src: url('fonts/MyriadProRegular.eot') format('embedded-opentype'),
+  url('fonts/MyriadProRegular.woff2') format('woff2'),
+  url('fonts/MyriadProRegular.woff') format('woff'),
+  url('fonts/MyriadProRegular.ttf') format('truetype'),
+  url('fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
+}
+@font-face {
+  font-family: 'georgia';
+  src: url('fonts/georgia.eot');
+  src: url('fonts/georgia.eot') format('embedded-opentype'),
+  url('fonts/georgia.woff2') format('woff2'),
+  url('fonts/georgia.woff') format('woff'),
+  url('fonts/georgia.ttf') format('truetype'),
+  url('fonts/georgia.svg#georgia') format('svg');
+}
 $OpenSans: 'OpenSansRegular', sans-serif;
+$MyriadPro: 'MyriadProRegular', sans-serif;
+$gerg: 'georgia', sans-serif;
 $pink: #d11457;
 $grey: #bec2c7;
+$light_grey: #f2f2f2;
 $p: #354351;
+
 
 body {
   margin: 0;
@@ -182,9 +203,23 @@ a .glasses:hover{
     padding: 0;
     margin: 0;
   }
+  .img_layer{
+    position: relative;
+    z-index: -2;
+  }
+  .layer{
+    width: 300px;
+    height: 189px;
+    background-color: $light_grey;
+    position: absolute;
+    margin-top: -90px;
+    z-index: -1;
+  }
   .iph{
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 3;
 
     .iphone_copy{
       width: 254px;
@@ -197,12 +232,14 @@ a .glasses:hover{
       font-weight: bold;
       line-height: 1;
       text-align: center;
+      margin-top: -30px;
     }
     p{
       font-size: 18px;
       font-family: $OpenSans;
       color: $p;
       padding-bottom: 70px;
+
     }
   }
   .time_24 {
@@ -234,4 +271,11 @@ a .glasses:hover{
       color: $pink;
     }
   }
+}
+//SECTION_3
+
+//Carousel
+
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{
+  display: block;
 }

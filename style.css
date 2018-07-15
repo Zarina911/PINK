@@ -2,6 +2,14 @@
   font-family: 'OpenSansRegular';
   src: url("fonts/OpenSansRegular.eot");
   src: url("fonts/OpenSansRegular.eot") format("embedded-opentype"), url("fonts/OpenSansRegular.woff2") format("woff2"), url("fonts/OpenSansRegular.woff") format("woff"), url("fonts/OpenSansRegular.ttf") format("truetype"), url("fonts/OpenSansRegular.svg#OpenSansRegular") format("svg"); }
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url("fonts/MyriadProRegular.eot");
+  src: url("fonts/MyriadProRegular.eot") format("embedded-opentype"), url("fonts/MyriadProRegular.woff2") format("woff2"), url("fonts/MyriadProRegular.woff") format("woff"), url("fonts/MyriadProRegular.ttf") format("truetype"), url("fonts/MyriadProRegular.svg#MyriadProRegular") format("svg"); }
+@font-face {
+  font-family: 'georgia';
+  src: url("fonts/georgia.eot");
+  src: url("fonts/georgia.eot") format("embedded-opentype"), url("fonts/georgia.woff2") format("woff2"), url("fonts/georgia.woff") format("woff"), url("fonts/georgia.ttf") format("truetype"), url("fonts/georgia.svg#georgia") format("svg"); }
 body {
   margin: 0;
   padding: 0;
@@ -139,9 +147,21 @@ a .glasses:hover {
     background-size: cover;
     padding: 0;
     margin: 0; }
+  .iphones .img_layer {
+    position: relative;
+    z-index: -2; }
+  .iphones .layer {
+    width: 300px;
+    height: 189px;
+    background-color: #f2f2f2;
+    position: absolute;
+    margin-top: -90px;
+    z-index: -1; }
   .iphones .iph {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    position: relative;
+    z-index: 3; }
     .iphones .iph .iphone_copy {
       width: 254px;
       margin-left: 45px; }
@@ -151,7 +171,8 @@ a .glasses:hover {
       color: #354351;
       font-weight: bold;
       line-height: 1;
-      text-align: center; }
+      text-align: center;
+      margin-top: -30px; }
     .iphones .iph p {
       font-size: 18px;
       font-family: "OpenSansRegular", sans-serif;
@@ -181,5 +202,8 @@ a .glasses:hover {
       padding-bottom: 46px; }
     .iphones .time_24 a {
       color: #d11457; }
+
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

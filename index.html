@@ -8,40 +8,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PINK</title>
     <link rel="stylesheet" href="fonts/OpenSansRegular.css">
+    <link rel="stylesheet" href="fonts/MyriadProRegular.css">
+    <link rel="stylesheet" href="fonts/georgia.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+
 </head>
 <body>
 
 <header>
     <!--<div class="container">-->
-        <!--&lt;!&ndash; Этот чекбокс даст нам поведение переключателя, он будет скрыт, но работать &ndash;&gt;-->
-        <!--<input id="toggle" type="checkbox">-->
+    <!--&lt;!&ndash; Этот чекбокс даст нам поведение переключателя, он будет скрыт, но работать &ndash;&gt;-->
+    <!--<input id="toggle" type="checkbox">-->
 
-        <!--&lt;!&ndash; ВАЖНО: любой элемент, который мы хотим модифицировать при изменении состояния чекбокса, является «братским» элементом для чекбокса &ndash;&gt;-->
+    <!--&lt;!&ndash; ВАЖНО: любой элемент, который мы хотим модифицировать при изменении состояния чекбокса, является «братским» элементом для чекбокса &ndash;&gt;-->
 
-        <!--&lt;!&ndash; Эта метка привязана к чекбоксу и будет содержать переключение «кнопок» &ndash;&gt;-->
-        <!--<label class="toggle-container" for="toggle">-->
-            <!--&lt;!&ndash; Если меню открыто, то здесь будет иконка «X», в противном случае просто иконка гамбургера &ndash;&gt;-->
-            <!--<span class="button button-toggle"></span>-->
-        <!--</label>-->
+    <!--&lt;!&ndash; Эта метка привязана к чекбоксу и будет содержать переключение «кнопок» &ndash;&gt;-->
+    <!--<label class="toggle-container" for="toggle">-->
+    <!--&lt;!&ndash; Если меню открыто, то здесь будет иконка «X», в противном случае просто иконка гамбургера &ndash;&gt;-->
+    <!--<span class="button button-toggle"></span>-->
+    <!--</label>-->
 
-        <!--&lt;!&ndash; Навигация &ndash;&gt;-->
-        <!--<nav class="nav">-->
-            <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Управление</a>-->
-            <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">История</a>-->
-            <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Статистика</a>-->
-            <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Настройки</a>-->
-        <!--</nav>-->
+    <!--&lt;!&ndash; Навигация &ndash;&gt;-->
+    <!--<nav class="nav">-->
+    <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Управление</a>-->
+    <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">История</a>-->
+    <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Статистика</a>-->
+    <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Настройки</a>-->
+    <!--</nav>-->
     <!--</div>-->
     <!--<div class="navbar-header">-->
-        <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
-                <!--data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
-            <!--<span class="sr-only">Toggle navigation</span>-->
-            <!--<span class="icon-bar"></span>-->
-            <!--<span class="icon-bar"></span>-->
-            <!--<span class="icon-bar"></span>-->
-        <!--</button>-->
+    <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
+    <!--data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+    <!--<span class="sr-only">Toggle navigation</span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--</button>-->
     <!--</div>-->
 
     <div class="logo">
@@ -63,54 +70,88 @@
 
 <section class="item">
     <div class="header_social">
-    <h2>Взгляните<br> на жизнь<br> иначе!</h2>
-    <button>Скачать приложение</button>
-    <div class="social">
-        <div><a href="#"><img src="images/Apple_logo_SVG.png" height="57" width="46"/></a></div>
-        <div><a href="#"><img src="images/Android_logo_SVG.png" height="47" width="42"/></a></div>
-        <div><a href="#"><img src="images/Microsoft_logo_SVG.png" height="42" width="44"/></a></div>
-    </div>
-    <p>Доступно для iPhone, iPad, Android,<br> Windows phone, Mac OS, Windows 8</p>
+        <h2>Взгляните<br> на жизнь<br> иначе!</h2>
+        <button>Скачать приложение</button>
+        <div class="social">
+            <div><a href="#"><img src="images/Apple_logo_SVG.png" height="57" width="46"/></a></div>
+            <div><a href="#"><img src="images/Android_logo_SVG.png" height="47" width="42"/></a></div>
+            <div><a href="#"><img src="images/Microsoft_logo_SVG.png" height="42" width="44"/></a></div>
+        </div>
+        <p>Доступно для iPhone, iPad, Android,<br> Windows phone, Mac OS, Windows 8</p>
     </div>
 </section>
 
 <section class="iphones">
-<h2 class="title">Устали от серости мегаполиса?<br>
-    Нам есть, что вам<br>
-    предложить!</h2>
+    <h2 class="title">Устали от серости мегаполиса?<br>
+        Нам есть, что вам<br>
+        предложить!</h2>
     <div class="info">
-    <div class="iph">
-        <div class="iphone_copy">
-            <img class="iphone_copy_1" src="images/Iphone_copy.png" height="382" width="186"/>
-            <h3>Поднимает настроение</h3>
-            <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-        </div>
+        <div class="iph">
+            <div class="iphone_copy">
+                <img class="iphone_copy_1 img_layer" src="images/Iphone_copy.png" height="382" width="186"/>
+                <div class="layer"></div>
+                <h3>Поднимает настроение</h3>
+                <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+            </div>
 
-        <div class="iphone_copy">
-            <img class="iphone_copy_2" src="images/Iphone_copy.png" height="382" width="186"/>
-            <h3>Меняет мир вокруг</h3>
-            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </div>
+            <div class="iphone_copy">
+                <img class="iphone_copy_2 img_layer" src="images/Iphone_copy.png" height="382" width="186"/>
+                <div class="layer"></div>
+                <h3>Меняет мир вокруг</h3>
+                <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </div>
 
-        <div class="iphone_copy">
-            <img class="iphone_copy_3" src="images/Iphone_copy.png" height="382" width="186"/>
-            <h3>Заводит новых друзей</h3>
-            <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            <div class="iphone_copy">
+                <img class="iphone_copy_3 img_layer" src="images/Iphone_copy.png" height="382" width="186"/>
+                <div class="layer"></div>
+                <h3>Заводит новых друзей</h3>
+                <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            </div>
         </div>
-    </div>
-    <div class="time_24">
-        <img  src="images/24_hour.png" height="346" width="301"/>
-    <div class="info_more">
-        <h2 class="effect">Эффект на 24 часа!</h2>
-        <p>Британские ученые провели исследования и доказали,
-            что положительный эффект от использования приложения длится целые сутки!
-        </p>
-        <a href="#">Узнать больше об исследовании</a>
-    </div>
-    </div>
+        <div class="time_24">
+            <img src="images/24_hour.png" height="346" width="301"/>
+            <div class="info_more">
+                <h2 class="effect">Эффект на 24 часа!</h2>
+                <p>Британские ученые провели исследования и доказали,
+                    что положительный эффект от использования приложения длится целые сутки!
+                </p>
+                <a href="#">Узнать больше об исследовании</a>
+            </div>
+        </div>
     </div>
 </section>
 
+<section class="responsive">
+<div class="owl-carousel carousel-responsive">
 
+<div class="carousel-responsive-item">
+    <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть
+        на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+    <h3><strong>Николай Петров</strong></h3>
+    <p>25 лет, водитель трамвая</p>
+</div>
+    <div class="carousel-responsive-item">
+        <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть
+            на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+        <h3><strong>Николай Петров</strong></h3>
+        <p>25 лет, водитель трамвая</p>
+    </div>
+    <div class="carousel-responsive-item">
+        <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть
+            на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+        <h3><strong>Николай Петров</strong></h3>
+        <p>25 лет, водитель трамвая</p>
+    </div>
+
+</div>
+
+
+</section>
+<script>
+    $('.carousel-responsive').owlCarousel({
+        loop: true,
+        nav: true
+    });
+</script>
 </body>
 </html>
