@@ -63,6 +63,17 @@ header {
     flex-direction: row;
     padding-top: 27px;
   }
+  .glasses:hover{
+    content: url(images/glasses_2.png);
+  }
+  .glasses:active{
+    content: url(images/glasses_2_grey.png);
+  }
+  .pink:active{
+    content: url(images/PINK copy 2_grey.png);
+  }
+
+
   .navbar > li > a:focus {
     border: 2px solid transparent;
   }
@@ -399,6 +410,8 @@ a .glasses:hover {
   }
 }
 
+//QUESTIONS
+
 .questions {
   padding-top: 75px;
   position: relative;
@@ -459,6 +472,7 @@ a .glasses:hover {
 @media (max-width: 1200px) {
 
 }
+//MAP
 
 .map {
   height: 520px;
@@ -473,6 +487,8 @@ a .glasses:hover {
     z-index: 0;
   }
 }
+
+//FOOTER
 
 footer {
   padding-top: 74px;

@@ -34,6 +34,12 @@ header {
     justify-content: flex-end;
     flex-direction: row;
     padding-top: 27px; }
+  header .glasses:hover {
+    content: url(images/glasses_2.png); }
+  header .glasses:active {
+    content: url(images/glasses_2_grey.png); }
+  header .pink:active {
+    content: url(images/glasses_2_grey.png); }
   header .navbar > li > a:focus {
     border: 2px solid transparent; }
   header .navbar > li > a:focus .navbar > li > a:hover {
