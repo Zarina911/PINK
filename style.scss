@@ -32,6 +32,7 @@ $pink: #d11457;
 $grey: #bec2c7;
 $light_grey: #f2f2f2;
 $p: #354351;
+$dark_blue: #283645;
 
 
 body {
@@ -276,6 +277,119 @@ a .glasses:hover{
 
 //Carousel
 
-.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{
-  display: block;
+.carousel-responsive-item{
+  width: 770px;
+  text-align: center;
+  font-size: 18px;
+  font-family: $OpenSans;
+  color: $p;
+  line-height: 1.667;
+  padding-top: 160px;
+  margin: 0 auto;
 }
+.carousel-responsive-item::before {
+  content: "“";
+  font-size: 240px;
+  font-family: $gerg;
+  color: $light_grey;
+  text-align: left;
+  position: absolute;
+  top: -10%;
+  left: 48%;
+  z-index: 0;
+}
+.owl-nav  button.owl-next{
+   position: absolute;
+   top: 50%;
+   right: 25%;
+   color: $grey !important;
+   font-size: 70px !important;
+  cursor:pointer;
+ }
+.owl-nav  button.owl-prev {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  color: $grey !important;
+  font-size: 70px !important;
+  cursor:pointer;
+}
+//table
+.table{
+  background: url(images/bg-3.png) no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+
+}
+.table-row{
+  padding-top: 175px;
+  padding-bottom: 95px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+  ul{
+    padding: 0;
+  }
+  ul li{
+    border: 2px solid $light_grey;
+    text-align: center;
+    width: 237px;
+    list-style: none;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 22px;
+    font-size: 18px;
+    font-family: $OpenSans;
+    color: $p;
+    line-height: 1.667;
+    font-weight: bold;
+    .usd{
+      font-size: 24px;
+      font-family: $OpenSans;
+      color: $grey;
+      text-transform: uppercase;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+  }
+  .order ul li{
+    text-align: left;
+    align-items: flex-end;
+    padding: 24px;
+  }
+  .order li:first-child{
+    visibility: hidden;
+    height: 58px;
+  }
+  .base li:first-child{
+    background-color: $dark_blue;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .standard{
+    position: relative;
+  }
+  .standard::before{
+content: url(images/hit_ribbon.png);
+    position: absolute;
+    top: 18px;
+    left: 2px;
+  }
+  .standard li:first-child{
+    background-color: $dark_blue;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .anlim li:first-child{
+    background-color: $dark_blue;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+}
+
