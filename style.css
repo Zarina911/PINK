@@ -34,16 +34,15 @@ header {
     justify-content: flex-end;
     flex-direction: row;
     padding-top: 27px; }
-  header .glasses:hover {
-    content: url(images/glasses_2.png); }
-  header .glasses:active {
-    content: url(images/glasses_2_grey.png); }
-  header .pink:active {
-    content: url(images/glasses_2_grey.png); }
-  header .navbar > li > a:focus {
-    border: 2px solid transparent; }
-  header .navbar > li > a:focus .navbar > li > a:hover {
-    border: 2px solid #ffffff; }
+    header .navbar a {
+      padding-bottom: 10px; }
+  header .navbar li a {
+    border-bottom: 2px solid transparent; }
+  header .navbar li a:hover {
+    border-bottom: 2px solid #ffffff; }
+  header .navbar li a:active {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.302);
+    color: rgba(255, 255, 255, 0.302); }
   header a:-webkit-any-link {
     color: #ffffff;
     text-decoration: none; }
@@ -56,9 +55,14 @@ header {
     font-family: "OpenSansRegular", sans-serif;
     line-height: 1; }
 
-a .glasses:hover {
-  background: url(images/glasses_2.png);
-  z-index: 1; }
+.glasses:hover {
+  content: url(images/glasses_2.png); }
+
+.glasses:active {
+  content: url(images/glasses_3.png); }
+
+.pink:active {
+  opacity: 0.3; }
 
 .item {
   background: url(images/background_photo.png) no-repeat;
@@ -121,6 +125,12 @@ a .glasses:hover {
     line-height: 0.8;
     text-align: center;
     margin-bottom: 65px; }
+  .item button:hover {
+    background-color: #ffffff;
+    color: #d11457; }
+  .item button:active {
+    background-color: #ffffff;
+    color: rgba(210, 40, 86, 0.302); }
   .item .social {
     width: 205px;
     display: flex;
