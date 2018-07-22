@@ -164,16 +164,27 @@ header {
     background-size: cover;
     padding: 0;
     margin: 0; }
-  .iphones .img_layer {
+  .iphones .img_iphone {
     position: relative;
     z-index: -2; }
+    .iphones .img_iphone .img_2 {
+      position: absolute;
+      top: 44px;
+      left: 43px;
+      z-index: 0; }
+    .iphones .img_iphone .img_2:hover {
+      content: url(images/screen_2.png);
+      z-index: 0; }
+    .iphones .img_iphone .img_2:active {
+      content: url(images/screen_3.png);
+      z-index: 0; }
   .iphones .layer {
     width: 300px;
     height: 189px;
     background-color: #f2f2f2;
     position: absolute;
     margin-top: -90px;
-    z-index: -1; }
+    z-index: -2; }
   .iphones .iph {
     display: flex;
     justify-content: center;
@@ -181,7 +192,8 @@ header {
     z-index: 3; }
     .iphones .iph .iphone_copy {
       width: 254px;
-      margin-left: 45px; }
+      margin-left: 45px;
+      position: relative; }
     .iphones .iph h3 {
       font-size: 30px;
       font-family: "OpenSansRegular", sans-serif;
@@ -354,7 +366,14 @@ header {
       text-align: center;
       -moz-transform: matrix(0.5873549053, 0, 0, 0.5873549053, 0, 0);
       -webkit-transform: matrix(0.5873549053, 0, 0, 0.5873549053, 0, 0);
-      -ms-transform: matrix(0.5873549053, 0, 0, 0.5873549053, 0, 0); }
+      -ms-transform: matrix(0.5873549053, 0, 0, 0.5873549053, 0, 0);
+      border-bottom: 3px solid transparent; }
+    .questions .ques li:last-child:hover {
+      border-bottom: 3px solid #283645;
+      color: #283645; }
+    .questions .ques li:last-child:active {
+      color: #bec2c7;
+      border: none; }
 
 .questions::after {
   content: url(images/bg_vector_down.png);
@@ -386,6 +405,12 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  footer .logo_footer .glasses_2:hover {
+    content: url(images/glasses_2_black.png); }
+  footer .logo_footer .glasses_2:active {
+    content: url(images/glasses_2_grey.png); }
+  footer .logo_footer .pink_2:active {
+    content: url(images/PINK_grey.png); }
   footer a:-webkit-any-link {
     text-decoration: none; }
   footer .social_2 {
@@ -400,6 +425,10 @@ footer {
       margin-left: 12px;
       top: 25%;
       left: 25%; }
+    footer .social_2 i:hover {
+      border: 3px solid #283645; }
+    footer .social_2 i:active {
+      opacity: 0.1; }
     footer .social_2 .fa-twitter::before {
       color: #d11457;
       position: absolute;
@@ -425,5 +454,13 @@ footer {
     font-family: "OpenSansRegular", sans-serif;
     color: #283645;
     line-height: 1; }
+    footer .website .vector_a:hover {
+      content: url(images/Vector_Smart_Object_dark.png); }
+    footer .website .vector_a:active {
+      content: url(images/Vector_Smart_Object_grey.png); }
+    footer .website .vector_logo:hover {
+      content: url(images/Vector_Smart_Object_2_dark.png); }
+    footer .website .vector_logo:active {
+      content: url(images/Vector_Smart_Object_2_grey.png); }
 
 /*# sourceMappingURL=style.css.map */
