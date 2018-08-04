@@ -1,4 +1,7 @@
 @charset "UTF-8";
+input[type="checkbox"] {
+  display: none; }
+
 @font-face {
   font-family: 'OpenSansRegular';
   src: url("fonts/OpenSansRegular.eot");
@@ -24,18 +27,52 @@ header {
   margin: 0 auto;
   z-index: 1;
   position: absolute;
-  top: 0; }
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  @media (max-width: 750px) {
+    header {
+      background-color: #283645; } }
   header .navbar-brand {
     position: absolute;
     left: 16%;
     padding-top: 27px; }
   header .navbar {
-    display: flex;
-    justify-content: flex-end;
     flex-direction: row;
-    padding-top: 27px; }
+    padding-top: 27px;
+    min-width: 645px; }
+    @media (max-width: 750px) {
+      header .navbar {
+        padding-top: 90px; } }
     header .navbar a {
       padding-bottom: 10px; }
+    @media (max-width: 750px) {
+      header .navbar ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        background-color: #283645;
+        color: #ffffff;
+        font-weight: bold; }
+      header .navbar li {
+        min-width: 700px;
+        padding-top: 29px;
+        padding-bottom: 23px;
+        text-align: center;
+        text-decoration: none;
+        border-bottom: 1px solid #000000;
+        box-shadow: 0 1px 0 0 #485461;
+        display: none; }
+      header .navbar li:first-child {
+        border-top: 1px solid #000000;
+        box-shadow: 0 0 0 1px #485461; }
+      header .navbar input.toggleMenu:checked + label.tonggleMenu {
+        background-color: white; }
+      header .navbar .toggleMenu:checked ul {
+        display: block; } }
   header .navbar li a {
     border-bottom: 2px solid transparent; }
   header .navbar li a:hover {
@@ -50,10 +87,15 @@ header {
     display: flex; }
   header ul > li {
     list-style: none;
-    padding-right: 100px;
+    padding-right: 80px;
     font-size: 16px;
     font-family: "OpenSansRegular", sans-serif;
     line-height: 1; }
+    @media (max-width: 1200px) {
+      header ul > li {
+        font-size: 14px;
+        padding-right: 50px;
+        justify-content: flex-end; } }
 
 .glasses:hover {
   content: url(images/glasses_2.png); }
@@ -63,6 +105,23 @@ header {
 
 .pink:active {
   opacity: 0.3; }
+
+.toggle-nav {
+  float: left;
+  font-size: 40px;
+  transition: color linear 0.15s;
+  position: absolute;
+  top: 27px;
+  right: 40px;
+  display: none; }
+  .toggle-nav .toggle-nav:hover {
+    color: #d11457; }
+  @media (max-width: 750px) {
+    .toggle-nav {
+      display: block; } }
+
+.navbar {
+  overflow: hidden; }
 
 .item {
   background: url(images/background_photo.png) no-repeat;
@@ -171,7 +230,7 @@ header {
       position: absolute;
       top: 44px;
       left: 43px;
-      z-index: 0; }
+      z-index: 2; }
     .iphones .img_iphone .img_2:hover {
       content: url(images/screen_2.png);
       z-index: 0; }
@@ -373,7 +432,7 @@ header {
       color: #283645; }
     .questions .ques li:last-child:active {
       color: #bec2c7;
-      border: none; }
+      border-bottom: 3px solid transparent; }
 
 .questions::after {
   content: url(images/bg_vector_down.png);

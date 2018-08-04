@@ -21,35 +21,6 @@
 <body>
 
 <header>
-    <!--<div class="container">-->
-    <!--&lt;!&ndash; Этот чекбокс даст нам поведение переключателя, он будет скрыт, но работать &ndash;&gt;-->
-    <!--<input id="toggle" type="checkbox">-->
-
-    <!--&lt;!&ndash; ВАЖНО: любой элемент, который мы хотим модифицировать при изменении состояния чекбокса, является «братским» элементом для чекбокса &ndash;&gt;-->
-
-    <!--&lt;!&ndash; Эта метка привязана к чекбоксу и будет содержать переключение «кнопок» &ndash;&gt;-->
-    <!--<label class="toggle-container" for="toggle">-->
-    <!--&lt;!&ndash; Если меню открыто, то здесь будет иконка «X», в противном случае просто иконка гамбургера &ndash;&gt;-->
-    <!--<span class="button button-toggle"></span>-->
-    <!--</label>-->
-
-    <!--&lt;!&ndash; Навигация &ndash;&gt;-->
-    <!--<nav class="nav">-->
-    <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Управление</a>-->
-    <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">История</a>-->
-    <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Статистика</a>-->
-    <!--<a rel="nofollow" rel="noreferrer" class="nav-item" href="">Настройки</a>-->
-    <!--</nav>-->
-    <!--</div>-->
-    <!--<div class="navbar-header">-->
-    <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
-    <!--data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
-    <!--<span class="sr-only">Toggle navigation</span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--</button>-->
-    <!--</div>-->
 
     <div class="logo">
         <a class="navbar-brand" href="#">
@@ -57,15 +28,18 @@
             <img class="pink" style="margin-left: 12px" src="images/PINK_logo.png" height="34" width="75"/>
         </a>
     </div>
-    <div class="navbar">
+    <nav  class="navbar">
+        <div class=" mobile_menu">
         <ul>
             <li><a href="#">Информация</a></li>
             <li><a href="#"> Возможности</a></li>
             <li><a href="#"> Отзывы</a></li>
             <li><a href="#"> Стоимость </a></li>
-
         </ul>
-    </div>
+        <a class="toggle-nav" href="#">&#9776;</a>
+        </div>
+    </nav>
+
 </header>
 
 <section class="item">
@@ -221,8 +195,8 @@
 <footer>
     <div class="logo_footer">
         <a class="logo_2" href="#">
-        <img class="glasses_2" src="images/glasses_copy 3.png" />
-        <img class="pink_2" style="margin-left: 12px" src="images/PINK_copy_2.png" />
+        <img class="glasses_2" src="images/glasses_copy 3.png"/>
+        <img class="pink_2" style="margin-left: 12px" src="images/PINK_copy_2.png"/>
         </a>
     </div>
     <div class="social_2">
@@ -239,6 +213,15 @@
         items: 1,
         loop: true,
         nav: true
+    });
+
+    jQuery(document).ready(function() {
+        jQuery('.toggle-nav').click(function(e) {
+            jQuery(this).toggleClass('active');
+            jQuery('.menu ul').toggleClass('active');
+
+            e.preventDefault();
+        });
     });
 </script>
 </body>

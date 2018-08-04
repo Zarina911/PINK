@@ -1,3 +1,7 @@
+input[type="checkbox"] {
+  display: none;
+}
+
 @font-face {
   font-family: 'OpenSansRegular';
   src: url('fonts/OpenSansRegular.eot');
@@ -51,22 +55,66 @@ header {
   z-index: 1;
   position: absolute;
   top: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  @media (max-width: 750px) {
+    background-color: $dark_blue;
+  }
   .navbar-brand {
     position: absolute;
     left: 16%;
     padding-top: 27px;
+
   }
   .navbar {
-    display: flex;
-    justify-content: flex-end;
     flex-direction: row;
     padding-top: 27px;
-    a {
+    min-width: 645px;
+    @media (max-width: 750px) {
+      padding-top: 90px;
+    }
+a {
       padding-bottom: 10px;
+ }
+
+    @media (max-width: 750px) {
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        background-color: $dark_blue;
+        color: #ffffff;
+        font-weight: bold;
+      }
+      li{
+        min-width: 700px;
+        padding-top: 29px;
+        padding-bottom: 23px;
+        text-align: center;
+        text-decoration: none;
+        border-bottom: 1px solid #000000;
+        box-shadow: 0 1px 0 0 #485461;
+        display: none;
+      }
+      li:first-child{
+        border-top: 1px solid #000000;
+        box-shadow:0 0 0 1px #485461;
+      }
+      input.toggleMenu:checked + label.tonggleMenu{
+         background-color:  white;
+       }
+      .toggleMenu:checked ul{
+        display: block;
+      }
     }
   }
+
   .navbar li a {
     border-bottom: 2px solid transparent;
+
   }
   .navbar li a:hover {
     border-bottom: 2px solid #ffffff;
@@ -84,10 +132,19 @@ header {
   }
   ul > li {
     list-style: none;
-    padding-right: 100px;
+
+    padding-right: 80px;
     font-size: 16px;
     font-family: $OpenSans;
     line-height: 1;
+    @media (max-width: 750px) {
+
+    }
+    @media (max-width: 1200px) {
+      font-size: 14px;
+      padding-right: 50px;
+      justify-content: flex-end;
+    }
   }
 }
 .glasses:hover {
@@ -99,6 +156,32 @@ header {
 .pink:active {
   opacity: 0.3;
 }
+
+///*----- Toggle Button -----*/
+
+.toggle-nav {
+  float: left;
+  font-size: 40px;
+  transition: color linear 0.15s;
+  position: absolute;
+  top: 27px;
+  right: 40px;
+  display: none;
+.toggle-nav:hover{
+color: $pink;
+}
+  @media (max-width: 750px) {
+    display: block;
+  }
+}
+.navbar{
+  overflow: hidden;
+
+}
+
+
+
+
 // //SECTION 1
 .item {
   background: url(images/background_photo.png) no-repeat;
@@ -220,6 +303,9 @@ header {
     padding: 0;
     margin: 0;
   }
+
+  //? hover
+
   .img_iphone {
     position: relative;
     z-index: -2;
@@ -227,7 +313,7 @@ header {
       position: absolute;
       top: 44px;
       left: 43px;
-      z-index: 0;
+      z-index: 2;
     }
     .img_2:hover {
       content: url(images/screen_2.png);
@@ -468,7 +554,7 @@ header {
     }
     li:last-child:active {
       color: $grey;
-      border: none;
+      border-bottom: 3px solid transparent;
     }
   }
 }
