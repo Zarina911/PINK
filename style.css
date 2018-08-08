@@ -29,15 +29,19 @@ header {
   position: absolute;
   top: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   flex-wrap: wrap; }
   header .header-wrap {
     display: flex;
-    flex-wrap: wrap; }
-  header .navbar-brand {
-    position: absolute;
-    left: 16%;
-    padding-top: 27px; }
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  header .logo {
+    display: flex;
+    justify-content: flex-start; }
+    header .logo .navbar-brand {
+      position: absolute;
+      left: 16%;
+      padding-top: 27px; }
   header .navbar {
     flex-direction: row;
     padding-top: 27px;
