@@ -31,9 +31,9 @@ header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap; }
-  @media (max-width: 750px) {
-    header {
-      background-color: #283645; } }
+  header .header-wrap {
+    display: flex;
+    flex-wrap: wrap; }
   header .navbar-brand {
     position: absolute;
     left: 16%;
@@ -42,9 +42,6 @@ header {
     flex-direction: row;
     padding-top: 27px;
     min-width: 645px; }
-    @media (max-width: 750px) {
-      header .navbar {
-        padding-top: 90px; } }
     header .navbar a {
       padding-bottom: 10px; }
     @media (max-width: 750px) {
@@ -103,6 +100,9 @@ header {
 .glasses:active {
   content: url(images/glasses_3.png); }
 
+@media (max-width: 320px) {
+  .glasses {
+    display: none; } }
 .pink:active {
   opacity: 0.3; }
 
@@ -111,8 +111,13 @@ header {
   font-size: 40px;
   transition: color linear 0.15s;
   position: absolute;
-  top: 27px;
+  top: 22px;
   right: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
   display: none; }
   .toggle-nav .toggle-nav:hover {
     color: #d11457; }
@@ -138,8 +143,7 @@ header {
     display: flex;
     flex-direction: column;
     padding-top: 260px;
-    padding-left: 300px;
-    padding-bottom: 314px; }
+    padding-left: 300px; }
   @media (max-width: 1500px) {
     .item {
       background-size: 100%;
@@ -151,18 +155,12 @@ header {
         flex-direction: column;
         padding-top: 180px;
         padding-left: 249px; } }
-  @media (max-width: 750px) {
-    .item .header_social {
-      display: flex;
-      flex-direction: column;
-      padding-top: 180px;
-      padding-left: 100px; } }
   @media (max-width: 400px) {
     .item .header_social {
       display: flex;
       flex-direction: column;
-      padding-top: 180px;
-      padding-left: 20px; } }
+      padding-top: 70px;
+      padding-left: 10px; } }
   .item h2 {
     width: 300px;
     font-size: 50px;
@@ -205,6 +203,55 @@ header {
     line-height: 1.333;
     text-align: left; }
 
+@media (max-width: 750px) {
+  .header_social {
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px;
+    padding-left: 45px; }
+
+  .item {
+    background: url(images/background_photo700.png) no-repeat; }
+
+  .item .social {
+    margin-bottom: 10px; } }
+@media (max-width: 320px) {
+  header {
+    min-height: 70px; }
+    header .navbar-brand {
+      align-items: center;
+      top: -10px; }
+    header .toggle-nav {
+      top: 10px; }
+
+  .item {
+    background: url(images/background_photo300.png) no-repeat;
+    background-color: #283645;
+    padding-bottom: 0;
+    min-height: 729px; }
+
+  .item button {
+    margin-left: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 290px; }
+
+  .social {
+    margin-bottom: 20px; }
+
+  .item p {
+    text-align: center;
+    max-width: 240px;
+    padding-left: 30px;
+    font-size: 14px; }
+
+  .item h2 {
+    font-size: 24px;
+    padding-bottom: 342px; }
+
+  .header_social {
+    padding-bottom: 0; } }
 .iphones {
   padding-top: 1200px;
   text-align: center; }

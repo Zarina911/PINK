@@ -1,0 +1,100 @@
+@media (max-width: 320px) {
+  header {
+    min-height: 70px; }
+    header .navbar-brand {
+      align-items: center;
+      top: -10px; }
+    header .toggle-nav {
+      top: 10px; }
+
+  .item {
+    background: url(images/background_photo300.png) no-repeat;
+    background-color: #283645;
+    padding-bottom: 0;
+    min-height: 729px; }
+
+  .item button {
+    margin-left: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 290px; }
+
+  .social {
+    margin-bottom: 20px; }
+
+  .item p {
+    text-align: center;
+    max-width: 240px;
+    padding-left: 30px;
+    font-size: 14px; }
+
+  .item h2 {
+    font-size: 24px;
+    padding-bottom: 342px; }
+
+  .header_social {
+    padding-bottom: 0; } }
+@media only screen and (max-width: 400px) {
+  .header_social {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-left: 10px; } }
+@media only screen and (max-width: 750px) {
+  header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    background-color: #283645;
+    color: #ffffff;
+    font-weight: bold; }
+  header li {
+    min-width: 700px;
+    padding-top: 29px;
+    padding-bottom: 23px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    box-shadow: 0 1px 0 0 #485461;
+    display: none; }
+  header li:first-child {
+    border-top: 1px solid #000000;
+    box-shadow: 0 0 0 1px #485461; }
+  header input.toggleMenu:checked + label.tonggleMenu {
+    background-color: white; }
+  header .toggleMenu:checked ul {
+    display: block; }
+  header .toggle-nav {
+    display: block; }
+  header .header_social {
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px;
+    padding-left: 45px; }
+  header .item {
+    background: url(images/background_photo700.png) no-repeat; }
+  header .item .social {
+    margin-bottom: 10px; } }
+@media (max-width: 1200px) {
+  header ul > li {
+    font-size: 14px;
+    padding-right: 50px;
+    justify-content: flex-end; } }
+@media only screen and (max-width: 1400px) {
+  .questions::after {
+    left: 0; } }
+@media only screen and (max-width: 1500px) {
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 314px;
+  .header_social {
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px;
+    padding-left: 249px; } }
+
+/*# sourceMappingURL=media2.css.map */

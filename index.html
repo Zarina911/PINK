@@ -11,17 +11,20 @@
     <link rel="stylesheet" href="fonts/MyriadProRegular.css">
     <link rel="stylesheet" href="fonts/georgia.css">
     <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="media2.css">-->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
     <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
 
+
+
 </head>
 <body>
 
 <header>
-
+<div class="header-wrap closed">
     <div class="logo">
         <a class="navbar-brand" href="#">
             <img class="glasses" src="images/glasses.png" height="40" width="59"/>
@@ -36,15 +39,16 @@
             <li><a href="#"> Отзывы</a></li>
             <li><a href="#"> Стоимость </a></li>
         </ul>
-        <a class="toggle-nav" href="#">&#9776;</a>
+        <button class="toggle-nav"><a> &#9776;
+        </a></button>
         </div>
     </nav>
-
+</div>
 </header>
 
 <section class="item">
     <div class="header_social">
-        <h2>Взгляните<br> на жизнь<br> иначе!</h2>
+        <h2>Взгляните на жизнь<br> иначе!</h2>
         <button>Скачать приложение</button>
         <div class="social">
             <div><a href="#"><img src="images/Apple_logo_SVG.png" height="57" width="46"/></a></div>
@@ -200,7 +204,7 @@
         </a>
     </div>
     <div class="social_2">
-        <div><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+        <div><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
         <div><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
         <div><a href="#"><i class="fa fa-play" aria-hidden="true"></i></a></div>
     </div>
@@ -216,13 +220,16 @@
     });
 
     jQuery(document).ready(function() {
-        jQuery('.toggle-nav').click(function(e) {
+        jQuery('.toggle-nav').click(function() {
             jQuery(this).toggleClass('active');
-            jQuery('.menu ul').toggleClass('active');
-
-            e.preventDefault();
+            jQuery('.header-wrap').toggleClass('active');
         });
     });
+//    $('.toggle-nav').on('click', function() {
+//        $(this).toggleClass('toggle-nav_active');
+//    });
+
+
 </script>
 </body>
 </html>
