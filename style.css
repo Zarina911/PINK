@@ -1,7 +1,4 @@
 @charset "UTF-8";
-input[type="checkbox"] {
-  display: none; }
-
 @font-face {
   font-family: 'OpenSansRegular';
   src: url("fonts/OpenSansRegular.eot");
@@ -69,11 +66,7 @@ header {
         display: none; }
       header .navbar li:first-child {
         border-top: 1px solid #000000;
-        box-shadow: 0 0 0 1px #485461; }
-      header .navbar input.toggleMenu:checked + label.tonggleMenu {
-        background-color: white; }
-      header .navbar .toggleMenu:checked ul {
-        display: block; } }
+        box-shadow: 0 0 0 1px #485461; } }
   header .navbar li a {
     border-bottom: 2px solid transparent; }
   header .navbar li a:hover {
@@ -277,18 +270,25 @@ header {
   .iphones .img_iphone {
     position: relative;
     z-index: -2; }
-    .iphones .img_iphone .img_2 {
-      position: absolute;
-      top: 44px;
-      left: 43px;
-      z-index: 2; }
-    .iphones .img_iphone .img_2:hover {
-      content: url(images/screen_2.png);
-      z-index: 0; }
-    .iphones .img_iphone .img_2:active {
-      content: url(images/screen_3.png);
-      z-index: 0; }
+  .iphones .img_2 {
+    position: absolute;
+    top: 44px;
+    left: 43px;
+    z-index: 2; }
+  .iphones .img_2:hover {
+    content: url(images/screen_2.png);
+    z-index: 2; }
+  .iphones .img_2:active {
+    content: url(images/screen_3.png);
+    z-index: 2; }
   .iphones .layer {
+    width: 300px;
+    height: 189px;
+    background-color: #f2f2f2;
+    position: absolute;
+    margin-top: -90px;
+    z-index: -2; }
+  .iphones .one {
     width: 300px;
     height: 189px;
     background-color: #f2f2f2;
@@ -342,6 +342,24 @@ header {
     .iphones .time_24 a {
       color: #d11457; }
 
+@media (max-width: 320px) {
+  .iphones {
+    padding-top: 790px; }
+    .iphones .title {
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: normal;
+      padding-bottom: 119px; }
+    .iphones .img_layer {
+      display: none;
+      order: 2; }
+    .iphones .layer {
+      display: none; }
+    .iphones .iph {
+      display: flex;
+      flex-direction: column; }
+    .iphones .part {
+      order: 1; } }
 .carousel-responsive-item {
   width: 770px;
   text-align: center;
