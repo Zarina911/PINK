@@ -267,6 +267,7 @@ header {
   button:active {
     background-color: #ffffff;
     color: rgba(210, 40, 86, 0.302);
+    border: none;
   }
   .social {
     width: 205px;
@@ -394,16 +395,17 @@ header {
     height: 189px;
     background-color: $light_grey;
     position: absolute;
-    margin-top: -90px;
+    margin-top: -79px;
     z-index: -2;
   }
   .one{
     width: 300px;
     height: 189px;
-    background-color: $light_grey;
+    background-color: #ffffff;
     position: absolute;
-    margin-top: -90px;
+    margin-top: -79px;
     z-index: -2;
+display: none;
   }
   .iph {
     display: flex;
@@ -429,8 +431,16 @@ header {
       font-family: $OpenSans;
       color: $p;
       padding-bottom: 70px;
+      width: 280px;
     }
   }
+  //.preview_1{
+  //  order: 1;
+  //}
+  //.preview_2{
+  //  order: 2;
+  //}
+
   .time_24 {
     display: flex;
     justify-content: center;
@@ -472,18 +482,35 @@ header {
       }
       .img_layer {
         display: none;
-        order:2;
+        margin-top: 150px;
       }
       .layer {
         display: none;
+      }
+      .one{
+        background-color: #ffffff;
+        display: block;
       }
 
       .iph {
         display: flex;
         flex-direction: column;
+        align-content: center;
+        padding-bottom: 272px;
+        .preview_3 {
+          margin-top: 130px;
+        }
+        .preview_4 {
+          margin-top: -550px;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 1.333;
+        }
       }
-      .part {
-        order: 1;
+      .time_24{
+        display: none;
       }
     }
   }
