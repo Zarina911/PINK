@@ -44,6 +44,8 @@ body {
   width: 100%;
 }
 
+//HEADER AND BUTTON
+
 header {
   min-height: 110px;
   width: 100%;
@@ -80,6 +82,8 @@ header {
     a {
       padding-bottom: 10px;
     }
+
+// MEDIA 750
 
     @media (max-width: 750px) {
       ul {
@@ -153,6 +157,8 @@ header {
   content: url(images/glasses_3.png);
 }
 
+//320
+
 @media (max-width: 320px) {
   .glasses {
     display: none;
@@ -181,17 +187,45 @@ header {
   .toggle-nav:hover {
     color: $pink;
   }
-  @media (max-width: 750px) {
+}
+.navbar {
+  overflow: hidden;
+}
+
+//750
+
+@media (max-width: 750px) {
+  header {
+    position: relative;
+    background-color: #283645;
+  }
+  header .navbar {
+    padding-top: 100px;
+  }
+  header.closed .navbar ul {
+    display: none;
+  }
+  header .navbar ul {
+    margin: 0;
+  }
+  header .navbar li {
     display: block;
+  }
+  header .navbar li:first-child {
+
+  }
+  .item {
+    position: relative;
+    padding: 0;
+  }
+  .iphones {
+    padding-top: 0;
   }
 }
 
-.navbar {
-  overflow: hidden;
 
-}
+ //SECTION 1 - ITEM
 
-// //SECTION 1
 .item {
   background: url(images/background_photo.png) no-repeat;
   position: absolute;
@@ -213,9 +247,9 @@ header {
     padding-left: 300px;
     //padding-bottom: 314px;
   }
-  //750
-  @media (min-width: 1500px) {
-    background-size: 100%;
+//1500
+  @media (max-width: 1500px) {
+    //background-size: 100%;
     display: flex;
     flex-direction: column;
     padding-bottom: 314px;
@@ -223,23 +257,16 @@ header {
       display: flex;
       flex-direction: column;
       padding-top: 180px;
-      padding-left: 249px;
     }
   }
-  @media (max-width: 750px) {
-    .header_social {
-      display: flex;
-      flex-direction: column;
-      padding-top: 180px;
-      padding-left: 45px;
-    }
-  }
+//400
   @media (max-width: 400px) {
     .header_social {
       display: flex;
       flex-direction: column;
       padding-top: 70px;
       padding-left: 10px;
+
     }
   }
   h2 {
@@ -292,18 +319,6 @@ header {
   }
 }
 
-//750
-
-@media (max-width: 750px) {
-
-  .item {
-    background: url(images/background_photo700.png) no-repeat;
-  }
-  .item .social {
-    margin-bottom: 10px;
-  }
-}
-
 //320
 
 @media (max-width: 320px) {
@@ -347,11 +362,33 @@ header {
   .header_social {
     padding-bottom: 0;
   }
-
+}
+//750
+@media (max-width: 750px) {
+  .toggle-nav{
+    display: block;
+  }
+  .header_social {
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px;
+  }
+  .item {
+    background: url(images/background_photo700.png) no-repeat;
+    padding-bottom: 0;
+  }
+  .item .header_social{
+    padding-left: 45px;
+  }
+  .item .social {
+    margin-bottom: 10px;
+  }
 }
 
-//section_2
-
+//section_2 iphones
+.iphone_750{
+  display: none;
+}
 .iphones {
   padding-top: 1200px;
   text-align: center;
@@ -475,6 +512,9 @@ header {
 //320
 
   @media (max-width: 320px) {
+    .iphone_750{
+      display: none;
+    }
     .iphones {
       padding-top: 790px;
       .title {
@@ -518,57 +558,52 @@ header {
   }
 
 //750
-
 @media (max-width: 750px) {
-  .iphones {
-    padding-top: 790px;
+  .iphones .title {
+    font-size: 40px;
+    padding-top: 0;
+  }
+  .time_24 {
 
-    .title {
-      font-size: 40px;
-      line-height: 1.2;
-      font-weight: normal;
-      padding-bottom: 50px;
-    }
-    .img_layer {
-      display: none;
-      margin-top: 150px;
-    }
-    .layer {
-      display: none;
-    }
-    .one {
-      background-color: #ffffff;
-      display: block;
-    }
+  }
+  .iphone_750{
+    display: block;
+    position: absolute;
+    top: 975px;
+    left: 40px;
+  }
+  .iphones {
+    position: relative;
     .iph {
       display: flex;
       flex-direction: column;
-      align-content: flex-end;
-      justify-content: flex-end;
-      flex-wrap: wrap-reverse;
-      padding-bottom: 267px;
-      text-align: left;
-      right: 40px;
-      .preview_3 {
-        margin-top: 130px;
+      flex-wrap: wrap;
 
-      }
-      .preview_4 {
-        margin-top: -550px;
-      }
-      h3 {
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1.333;
-        text-align: left;
-      }
+    }
+    .img_iphone {
+      z-index: 0;
+    }
+    .img_layer {
+      display: none;
+    }
+    .img_2 {
+      position: absolute;
+      top: 45px;
+      left: 9px;
+    }
+    .layer{
+      display: none;
+    }
+    .layer_750{
+      width: 300px;
+      height: 189px;
+      background-color: #f2f2f2;
+      position: absolute;
+      margin-top: -79px;
+      z-index: -2;
     }
   }
-  .time_24 {
-    display: none;
-  }
 }
-
 
   //SECTION_3
 
@@ -697,7 +732,8 @@ header {
   }
 }
 
-  //table
+  //TABLE
+
   .table {
     background: url(images/bg-3.png) no-repeat;
     background-size: cover;
@@ -774,7 +810,7 @@ header {
     }
   }
 
-  //questions
+  //QUESTION
 
   .questions {
     padding-top: 75px;

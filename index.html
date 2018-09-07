@@ -68,8 +68,8 @@
                 <div class="img_iphone">
                     <img class="iphone_copy_1 img_layer" src="images/Iphone_copy.png" height="382" width="186"/>
                 </div>
-                <img style="" class="img_2 img_layer" src="images/Iphone_screen_1_copy.png"/>
-                <div class="layer "></div>
+                <img style="" class="img_2 img_layer preview_5" src="images/Iphone_screen_1_copy.png"/>
+                <div class="layer"></div>
 
                 <h3>Поднимает настроение</h3>
                 <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
@@ -85,20 +85,23 @@
                 <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </div>
 
-            <div class="iphone_copy ">
+            <div class="iphone_copy  preview_5">
 
                 <div class="img_iphone  preview_3">
-                    <img class="iphone_copy_3 " src="images/Iphone_copy.png" height="382" width="186"/>
+                    <img class="iphone_copy_3 img_layer " src="images/Iphone_copy.png" height="382" width="186"/>
                 </div>
-                <img class="img_2  preview_3" src="images/Iphone_screen_1_copy.png" />
+                <img class="img_2 img_layer  preview_3" src="images/Iphone_screen_1_copy.png" />
                 <div class="layer"></div>
                 <div class="one"></div>
-
                 <div class=" preview_4">
                 <h3>Заводит новых друзей</h3>
                 <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
                 </div>
             </div>
+        </div>
+        <div class="iphone_750">
+            <img src="images/Iphone_750.png" height="548" width="268"/>
+            <div class="layer_750"></div>
         </div>
         <div class="time_24">
             <img src="images/24_hour.png" height="346" width="301"/>
@@ -252,16 +255,20 @@
     });
 
 
-    jQuery(document).ready(function () {
-        jQuery('.toggle-nav').click(function () {
-            jQuery(this).toggleClass('active');
-            jQuery('.header-wrap').toggleClass('active');
-        });
-    });
+//    jQuery(document).ready(function () {
+    //        jQuery('.toggle-nav').click(function () {
+    //            jQuery(this).toggleClass('active');
+    //            jQuery('.header-wrap').toggleClass('active');
+    //        });
+    //    });
     //    $('.toggle-nav').on('click', function() {
     //        $(this).toggleClass('toggle-nav_active');
     //    });
-
+    jQuery(document).ready(function () {
+        jQuery('.toggle-nav').click(function () {
+            jQuery('header').toggleClass('closed');
+        });
+    });
 
 </script>
 </body>

@@ -118,13 +118,33 @@ header {
   display: none; }
   .toggle-nav .toggle-nav:hover {
     color: #d11457; }
-  @media (max-width: 750px) {
-    .toggle-nav {
-      display: block; } }
 
 .navbar {
   overflow: hidden; }
 
+@media (max-width: 750px) {
+  header {
+    position: relative;
+    background-color: #283645; }
+
+  header .navbar {
+    padding-top: 100px; }
+
+  header.closed .navbar ul {
+    display: none; }
+
+  header .navbar ul {
+    margin: 0; }
+
+  header .navbar li {
+    display: block; }
+
+  .item {
+    position: relative;
+    padding: 0; }
+
+  .iphones {
+    padding-top: 0; } }
 .item {
   background: url(images/background_photo.png) no-repeat;
   position: absolute;
@@ -141,23 +161,15 @@ header {
     flex-direction: column;
     padding-top: 260px;
     padding-left: 300px; }
-  @media (min-width: 1500px) {
+  @media (max-width: 1500px) {
     .item {
-      background-size: 100%;
       display: flex;
       flex-direction: column;
       padding-bottom: 314px; }
       .item .header_social {
         display: flex;
         flex-direction: column;
-        padding-top: 180px;
-        padding-left: 249px; } }
-  @media (max-width: 750px) {
-    .item .header_social {
-      display: flex;
-      flex-direction: column;
-      padding-top: 180px;
-      padding-left: 45px; } }
+        padding-top: 180px; } }
   @media (max-width: 400px) {
     .item .header_social {
       display: flex;
@@ -207,12 +219,6 @@ header {
     line-height: 1.333;
     text-align: left; }
 
-@media (max-width: 750px) {
-  .item {
-    background: url(images/background_photo700.png) no-repeat; }
-
-  .item .social {
-    margin-bottom: 10px; } }
 @media (max-width: 320px) {
   header {
     min-height: 70px; }
@@ -250,6 +256,27 @@ header {
 
   .header_social {
     padding-bottom: 0; } }
+@media (max-width: 750px) {
+  .toggle-nav {
+    display: block; }
+
+  .header_social {
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px; }
+
+  .item {
+    background: url(images/background_photo700.png) no-repeat;
+    padding-bottom: 0; }
+
+  .item .header_social {
+    padding-left: 45px; }
+
+  .item .social {
+    margin-bottom: 10px; } }
+.iphone_750 {
+  display: none; }
+
 .iphones {
   padding-top: 1200px;
   text-align: center; }
@@ -347,6 +374,9 @@ header {
     color: #d11457; }
 
 @media (max-width: 320px) {
+  .iphone_750 {
+    display: none; }
+
   .iphones {
     padding-top: 790px; }
     .iphones .title {
@@ -379,42 +409,39 @@ header {
   .time_24 {
     display: none; } }
 @media (max-width: 750px) {
+  .iphones .title {
+    font-size: 40px;
+    padding-top: 0; }
+
+  .iphone_750 {
+    display: block;
+    position: absolute;
+    top: 975px;
+    left: 40px; }
+
   .iphones {
-    padding-top: 790px; }
-    .iphones .title {
-      font-size: 40px;
-      line-height: 1.2;
-      font-weight: normal;
-      padding-bottom: 50px; }
-    .iphones .img_layer {
-      display: none;
-      margin-top: 150px; }
-    .iphones .layer {
-      display: none; }
-    .iphones .one {
-      background-color: #ffffff;
-      display: block; }
+    position: relative; }
     .iphones .iph {
       display: flex;
       flex-direction: column;
-      align-content: flex-end;
-      justify-content: flex-end;
-      flex-wrap: wrap-reverse;
-      padding-bottom: 267px;
-      text-align: left;
-      right: 40px; }
-      .iphones .iph .preview_3 {
-        margin-top: 130px; }
-      .iphones .iph .preview_4 {
-        margin-top: -550px; }
-      .iphones .iph h3 {
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1.333;
-        text-align: left; }
-
-  .time_24 {
-    display: none; } }
+      flex-wrap: wrap; }
+    .iphones .img_iphone {
+      z-index: 0; }
+    .iphones .img_layer {
+      display: none; }
+    .iphones .img_2 {
+      position: absolute;
+      top: 45px;
+      left: 9px; }
+    .iphones .layer {
+      display: none; }
+    .iphones .layer_750 {
+      width: 300px;
+      height: 189px;
+      background-color: #f2f2f2;
+      position: absolute;
+      margin-top: -79px;
+      z-index: -2; } }
 .carousel-responsive-item {
   width: 770px;
   text-align: center;
