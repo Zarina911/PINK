@@ -38,8 +38,7 @@
                     <li><a href="#"> Отзывы</a></li>
                     <li><a href="#"> Стоимость </a></li>
                 </ul>
-                <button class="toggle-nav"><a> &#9776;
-                </a></button>
+                <button class="toggle-nav"><a> &#9776;</a></button>
             </div>
         </nav>
     </div>
@@ -100,9 +99,9 @@
             </div>
         </div>
         <div class="iphone_750">
-            <img src="images/Iphone_750.png" height="548" width="268"/>
-            <!--<div class="layer_750"></div>-->
-    </div>
+            <img src="images/Iphone_750_1.png" height="458" width="268"/>
+        </div>
+
         <div class="time_24">
             <img class="images_24_hour" src="images/24_hour.png" height="346" width="301"/>
             <div class="info_more">
@@ -186,15 +185,15 @@
 <section class="questions">
     <h2> Остались вопросы?<br> Свяжитесь с нами!</h2>
     <div class="ques">
-        <ul>
+        <ul class="call">
             <li>Звоните:</li>
             <li>8 (800) 1000 900</li>
         </ul>
-        <ul>
+        <ul class="go">
             <li>Приезжайте в гости:</li>
             <li>Санкт-Петербург,<br> Невский проспект, д. 20</li>
         </ul>
-        <ul>
+        <ul class="write">
             <li>Пишите:</li>
             <li>hello@pinkapp.ru</li>
         </ul>
@@ -230,17 +229,6 @@
         nav: true,
         dots: true
     });
-
-
-//    jQuery(document).ready(function () {
-    //        jQuery('.toggle-nav').click(function () {
-    //            jQuery(this).toggleClass('active');
-    //            jQuery('.header-wrap').toggleClass('active');
-    //        });
-    //    });
-    //    $('.toggle-nav').on('click', function() {
-    //        $(this).toggleClass('toggle-nav_active');
-    //    });
     jQuery(document).ready(function () {
         jQuery('.toggle-nav').click(function () {
             jQuery('header').toggleClass('closed');

@@ -250,10 +250,6 @@ header {
     padding-left: 30px;
     font-size: 14px; }
 
-  .item h2 {
-    font-size: 24px;
-    padding-bottom: 342px; }
-
   .header_social {
     padding-bottom: 0; } }
 @media (max-width: 750px) {
@@ -274,6 +270,9 @@ header {
 
   .item .social {
     margin-bottom: 10px; } }
+@media (min-width: 1200px) {
+  .item .header_social {
+    padding-left: 130px; } }
 .iphone_750 {
   display: none; }
 
@@ -359,14 +358,14 @@ header {
     font-family: "OpenSansRegular", sans-serif;
     color: #354351;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.2;
     text-align: left;
     width: 525px; }
   .time_24 .info_more {
     font-size: 18px;
     font-family: "OpenSansRegular", sans-serif;
     color: #354351;
-    line-height: 1;
+    line-height: 1.2;
     text-align: left;
     width: 525px;
     padding-left: 65px;
@@ -438,18 +437,23 @@ header {
   .iphone_750 {
     display: block;
     position: absolute;
-    top: 1190px;
+    top: 1233px;
     left: 40px;
-    z-index: 1; }
+    height: 600px; }
 
   .iphones {
     padding-top: 600px;
     padding-bottom: 115px; }
+    .iphones .iphone_copy h3 {
+      color: #000000;
+      font-size: 18px;
+      text-align: left;
+      font-weight: bold; }
     .iphones .iph {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
       text-align: left;
+      padding: 15px 5% 40px 50%;
       z-index: 0; }
     .iphones .img_iphone {
       z-index: 0; }
@@ -484,21 +488,21 @@ header {
   text-align: left;
   position: absolute;
   top: -10%;
-  left: 48%;
+  left: 46%;
   z-index: 0; }
 
 .owl-nav button.owl-next {
   position: absolute;
-  top: 50%;
-  right: 25%;
+  top: 35%;
+  right: 15%;
   color: #bec2c7 !important;
   font-size: 70px !important;
   cursor: pointer; }
 
 .owl-nav button.owl-prev {
   position: absolute;
-  top: 50%;
-  left: 25%;
+  top: 35%;
+  left: 15%;
   color: #bec2c7 !important;
   font-size: 70px !important;
   cursor: pointer; }
@@ -668,7 +672,12 @@ header {
       visibility: hidden;
       height: 45px; }
     .table-row .order ul li {
-      padding: 11px; } }
+      padding: 11px; }
+    .table-row .standard::before {
+      content: url(images/hit_ribbon_750.png);
+      position: absolute;
+      top: 18px;
+      left: 2px; } }
 .questions {
   padding-top: 75px;
   position: relative; }
@@ -749,6 +758,63 @@ header {
     content: url(images/bg-3_vector320.png);
     bottom: -30px;
     left: 0; } }
+@media (max-width: 750px) {
+  .questions {
+    padding-top: 30px; }
+    .questions h2 {
+      font-size: 40px; }
+    .questions .ques {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      min-width: 275px;
+      padding: 0;
+      margin: 0;
+      line-height: 50px; }
+      .questions .ques li:first-child {
+        font-size: 24px;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0; }
+      .questions .ques li:last-child {
+        padding: 0;
+        font-size: 41px;
+        line-height: 1.2;
+        margin: 0; }
+      .questions .ques .call {
+        order: 1; }
+      .questions .ques .write {
+        order: 2; }
+      .questions .ques .go {
+        order: 3; }
+
+  .questions::after {
+    content: url(images/bg-3_vector750.png);
+    bottom: -126px !important;
+    left: 0 !important; } }
+@media (max-width: 1200px) {
+  .questions h2 {
+    font-size: 50px; }
+  .questions .ques li:first-child {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0; }
+  .questions .ques li:last-child {
+    padding: 0;
+    font-size: 41px;
+    line-height: 1.2;
+    margin: 0; }
+  .questions .ques .call {
+    order: 1; }
+  .questions .ques .write {
+    order: 3; }
+  .questions .ques .go {
+    order: 2; }
+
+  .questions::after {
+    bottom: -126px;
+    left: -97px; } }
 .map {
   height: 520px;
   position: relative;

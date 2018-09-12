@@ -356,8 +356,8 @@ header {
     font-size: 14px;
   }
   .item h2 {
-    font-size: 24px;
-    padding-bottom: 342px;
+    //font-size: 24px;
+    //padding-bottom: 342px;
   }
   .header_social {
     padding-bottom: 0;
@@ -385,7 +385,15 @@ header {
   }
 }
 
+//1200
+@media (min-width: 1200px) {
+  .item .header_social{
+    padding-left: 130px;
+  }
+}
+
 //section_2 iphones
+
 .iphone_750{
   display: none;
 }
@@ -490,7 +498,7 @@ header {
       font-family: $OpenSans;
       color: $p;
       font-weight: bold;
-      line-height: 1;
+      line-height: 1.2;
       text-align: left;
       width: 525px;
 
@@ -499,7 +507,7 @@ header {
       font-size: 18px;
       font-family: $OpenSans;
       color: $p;
-      line-height: 1;
+      line-height: 1.2;
       text-align: left;
       width: 525px;
       padding-left: 65px;
@@ -593,19 +601,27 @@ header {
   .iphone_750{
     display: block;
     position: absolute;
-    top: 1190px;
+    top: 1233px;
     left: 40px;
-    z-index: 1;
+    height: 600px;
   }
   .iphones {
     //position: relative;
     padding-top: 600px;
     padding-bottom: 115px;
+    .iphone_copy{
+      h3{
+        color: #000000;
+        font-size: 18px;
+        text-align: left ;
+        font-weight: bold;
+      }
+    }
     .iph {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
       text-align: left;
+      padding: 15px 5% 40px 50%;
       z-index: 0;
     }
     .img_iphone {
@@ -622,14 +638,6 @@ header {
     .layer{
       display: none;
     }
-    //.layer_750{
-    //  width: 300px;
-    //  height: 189px;
-    //  background-color: #f2f2f2;
-    //  position: absolute;
-    //
-    //  z-index: -2;
-    //}
   }
 
 }
@@ -663,14 +671,14 @@ header {
   text-align: left;
   position: absolute;
   top: -10%;
-  left: 48%;
+  left: 46%;
   z-index: 0;
 }
 
 .owl-nav button.owl-next {
   position: absolute;
-  top: 50%;
-  right: 25%;
+  top: 35%;
+  right: 15%;
   color: $grey !important;
   font-size: 70px !important;
   cursor: pointer;
@@ -678,8 +686,8 @@ header {
 
 .owl-nav button.owl-prev {
   position: absolute;
-  top: 50%;
-  left: 25%;
+  top: 35%;
+  left: 15%;
   color: $grey !important;
   font-size: 70px !important;
   cursor: pointer;
@@ -871,7 +879,7 @@ header {
 //750
 
 @media (max-width: 750px) {
-  .table{
+  .table {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -891,17 +899,16 @@ header {
       height: 45px;
     }
     .order ul li {
-    padding: 11px;
+      padding: 11px;
     }
     .standard::before {
       content: url(images/hit_ribbon_750.png);
       position: absolute;
       top: 18px;
       left: 2px;
+    }
   }
 }
-
-
 
   //QUESTION
 
@@ -998,13 +1005,98 @@ header {
         }
       }
     }
-    .questions::after{
+    .questions::after {
       content: url(images/bg-3_vector320.png);
       bottom: -30px;
       left: 0;
     }
 
   }
+
+  //750
+  @media (max-width: 750px) {
+    .questions {
+      padding-top: 30px;
+      h2 {
+        font-size: 40px;
+      }
+      .ques {
+        //padding-top: 70px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        min-width: 275px;
+        padding: 0;
+        margin: 0;
+        line-height: 50px;
+        li:first-child {
+          font-size: 24px;
+          line-height: 1.2;
+          margin: 0;
+          padding: 0;
+        }
+        li:last-child {
+          padding: 0;
+          font-size: 41px;
+          line-height: 1.2;
+          margin: 0;
+        }
+        .call{
+          order: 1;
+        }
+        .write{
+          order: 2;
+        }
+        .go{
+          order: 3;
+        }
+      }
+    }
+    .questions::after {
+      content: url(images/bg-3_vector750.png);
+      bottom: -126px !important;
+      left: 0 !important;
+    }
+  }
+
+//1200
+
+@media (max-width: 1200px) {
+  .questions {
+    h2 {
+      font-size: 50px;
+    }
+    .ques {
+      //padding-top: 70px;
+
+      li:first-child {
+        font-size: 18px;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+      }
+      li:last-child {
+        padding: 0;
+        font-size: 41px;
+        line-height: 1.2;
+        margin: 0;
+      }
+      .call{
+        order: 1;
+      }
+      .write{
+        order: 3;
+      }
+      .go{
+        order: 2;
+      }
+    }
+  }
+  .questions::after {
+    bottom: -126px;
+    left: -97px;
+  }
+}
 
   // MAP
 
