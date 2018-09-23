@@ -50,13 +50,11 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding-left: 0;
         background-color: #283645;
         color: #ffffff;
         font-weight: bold; }
       header .navbar li {
-        min-width: 700px;
+        min-width: 750px;
         padding-top: 29px;
         padding-bottom: 23px;
         text-align: center;
@@ -97,6 +95,24 @@ header {
 .glasses:active {
   content: url(images/glasses_3.png); }
 
+@media (max-width: 320px) {
+  header .navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #283645;
+    color: #ffffff;
+    font-weight: bold; }
+
+  header .navbar li {
+    min-width: 320px;
+    padding-top: 29px;
+    padding-bottom: 23px;
+    text-align: right;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    box-shadow: 0 1px 0 0 #485461;
+    display: none; } }
 @media (max-width: 320px) {
   .glasses {
     display: none; } }
@@ -233,25 +249,23 @@ header {
     background-color: #283645;
     padding-bottom: 0;
     min-height: 729px; }
-
-  .item button {
-    margin-left: 5px;
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 290px; }
+    .item button {
+      margin-left: 5px;
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 290px; }
+    .item p {
+      text-align: center;
+      max-width: 240px;
+      padding-left: 30px;
+      font-size: 14px; }
+    .item .header_social {
+      padding-bottom: 0;
+      padding-left: 13px !important; }
 
   .social {
-    margin-bottom: 20px; }
-
-  .item p {
-    text-align: center;
-    max-width: 240px;
-    padding-left: 30px;
-    font-size: 14px; }
-
-  .header_social {
-    padding-bottom: 0; } }
+    margin-bottom: 20px; } }
 @media (max-width: 750px) {
   .toggle-nav {
     display: block; }
@@ -270,15 +284,21 @@ header {
 
   .item .social {
     margin-bottom: 10px; } }
+@media (min-width: 1100px) {
+  .item .header_social {
+    padding-left: 130px; } }
 @media (min-width: 1200px) {
   .item .header_social {
     padding-left: 130px; } }
+@media (min-width: 1400px) {
+  .item .header_social {
+    padding-left: 240px; } }
 .iphone_750 {
   display: none; }
 
 .iphones {
   background-color: #ffffff;
-  padding-top: 1200px;
+  padding-top: 975px;
   text-align: center; }
   @media (max-width: 1500px) {
     .iphones {
@@ -376,36 +396,35 @@ header {
 
 @media (max-width: 320px) {
   .iphone_750 {
-    display: none; }
+    display: none !important; }
 
-  .iphones {
-    padding-top: 790px; }
-    .iphones .title {
-      font-size: 24px;
-      line-height: 1.2;
-      font-weight: normal;
-      padding-bottom: 119px; }
-    .iphones .img_layer {
-      display: none;
-      margin-top: 150px; }
-    .iphones .layer {
-      display: none; }
-    .iphones .one {
-      background-color: #ffffff;
-      display: block; }
-    .iphones .iph {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      padding-bottom: 267px; }
-      .iphones .iph .preview_3 {
-        margin-top: 130px; }
-      .iphones .iph .preview_4 {
-        margin-top: -550px; }
-      .iphones .iph h3 {
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1.333; }
+  .iphones .title {
+    font-size: 24px !important;
+    color: #bec2c7;
+    font-weight: normal;
+    text-align: center;
+    margin-left: 20px !important; }
+  .iphones .iph {
+    padding: 0 !important;
+    text-align: center !important; }
+    .iphones .iph .iphone_copy {
+      width: 254px;
+      margin-left: 20px !important;
+      position: relative; }
+    .iphones .iph h3 {
+      font-size: 18px;
+      font-family: "OpenSansRegular", sans-serif;
+      color: #354351;
+      font-weight: bold;
+      line-height: 1;
+      text-align: center !important;
+      margin-top: -30px; }
+    .iphones .iph p {
+      font-size: 18px;
+      font-family: "OpenSansRegular", sans-serif;
+      color: #354351;
+      padding-bottom: 70px;
+      width: 280px; }
 
   .time_24 {
     display: none; } }
