@@ -399,11 +399,10 @@ header {
     display: none !important; }
 
   .iphones .title {
-    font-size: 24px !important;
+    font-size: 27px !important;
     color: #bec2c7;
     font-weight: normal;
-    text-align: center;
-    margin-left: 20px !important; }
+    text-align: center; }
   .iphones .iph {
     padding: 0 !important;
     text-align: center !important; }
@@ -418,13 +417,19 @@ header {
       font-weight: bold;
       line-height: 1;
       text-align: center !important;
-      margin-top: -30px; }
+      padding-left: 27px; }
     .iphones .iph p {
       font-size: 18px;
       font-family: "OpenSansRegular", sans-serif;
       color: #354351;
       padding-bottom: 70px;
       width: 280px; }
+  .iphones .preview_4::after {
+    display: block;
+    content: "";
+    height: 275px;
+    background: url(images/Iphone_750_1.png) 50% 0 no-repeat;
+    background-size: 148px auto; }
 
   .time_24 {
     display: none; } }
@@ -461,8 +466,7 @@ header {
     height: 600px; }
 
   .iphones {
-    padding-top: 600px;
-    padding-bottom: 115px; }
+    padding-top: 600px; }
     .iphones .iphone_copy h3 {
       color: #000000;
       font-size: 18px;
@@ -753,7 +757,7 @@ header {
     left: 0; } }
 @media (max-width: 320px) {
   .questions h2 {
-    font-size: 24px;
+    font-size: 24px !important;
     padding: 48px auto; }
   .questions .ques {
     display: flex;
@@ -766,16 +770,18 @@ header {
     .questions .ques li:first-child {
       font-size: 14px;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      font-weight: bold; }
     .questions .ques li:last-child {
       padding: 0;
       width: 280px;
-      font-size: 24px;
+      font-size: 24px !important;
       margin: 0; }
 
   .questions::after {
     content: url(images/bg-3_vector320.png);
-    bottom: -30px;
+    width: 100%;
+    bottom: 0;
     left: 0; } }
 @media (max-width: 750px) {
   .questions {
