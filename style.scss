@@ -1065,17 +1065,21 @@ header {
           font-size: 24px !important;
           margin: 0;
         }
+        .call{
+          order: 1;
+        }
+        .write{
+          order: 2;
+        }
+        .go{
+          order: 3;
+        }
       }
     }
-    //?
     .questions::after {
-      content: url(images/bg-3_vector320.png);
-      width: 100%;
-      bottom:0;
-      left: 0;
+      content: url(images/bg-3_vector320.png) !important;
+      bottom: -50px !important;
     }
-
-
   }
 
   //750
@@ -1119,7 +1123,7 @@ header {
     }
     .questions::after {
       content: url(images/bg-3_vector750.png);
-      bottom: -126px !important;
+      bottom: -126px;
       left: 0 !important;
     }
   }
@@ -1146,19 +1150,10 @@ header {
         line-height: 1.2;
         margin: 0;
       }
-      .call{
-        order: 1;
-      }
-      .write{
-        order: 3;
-      }
-      .go{
-        order: 2;
-      }
     }
   }
   .questions::after {
-    bottom: -126px;
+    //bottom: -126px;
     left: -97px;
   }
 }
